@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS document</title>
+    <link href="/CSS/test.css" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .flex-container {
+            background-color: #f4f7f8;
+            resize: horizontal;
+            overflow: hidden;
+            display: flex;
+            margin: 1em;
+        }
+
+        .item {
+            margin: 1em;
+            padding: 0.5em;
+            width: 110px;
+            min-width: 0;
+            background-color: #1b5385;
+            color: white;
+            font-family: monospace;
+            font-size: 13px;
+        }
+
+        .initial {
+            flex: initial;
+        }
+
+        .auto {
+            flex: auto;
+        }
+
+        .none {
+            flex: none;
+        }
+
+        .four {
+            flex: 2;
+        }
+
+        .two {
+            flex: 1;
+        }
+
+        .one {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is lorem ipsum Text</h1>
+    <p>Lorem dit minus provident voluptatem veniam optio exercitationem commodi iusto nisi quod,
+        dolore laborum, accusantium alias necessitatibus ut modi ullam magnam nobis similique blanditiis
+        tempore laudantium. Voluptatum adipisci, sequi excepturi voluptatibus dolor atque voluptate
+        cupiditate natus reiciendis temporibus harum nihil, eaque porro. Laudantium vitae ipsa tempora facere
+        deleniti sint, iste iure numquam magni nostrum labore dolores ratione delectus aperiam quo ullam
+        quaerat. Odio, voluptas? Ullam nihil possimus illo, doloremque facilis minus natus quaerat dignissimos
+        praesentium asperiores mollitia iusto recusandae magni ab ipsa aperiam, quas fuga quos!
+        Labore distinctio sed doloremque rem! Id, laboriosam. Quibusdam obcaecati dolorum natus voluptatum
+        ex accusamus aperiam itaque. Nemo tempore mollitia repellendus perferendis saepe consequatur vitae alias nihil,
+        cupiditate a molestias, illo ullam aliquid deserunt repudiandae fugit eligendi corporis rerum illum sed?<br>
+    </p>
+    <p> You can specify background images<br>
+        for any visible HTML element.<br>
+        In this example, the background image<br>
+        is specified for a p element.<br>
+        By default, the background-image<br>
+        will repeat itself in the direction(s)<br>
+        where it is smaller than the element<br>
+        where it is specified. (Try resizing the<br>
+        browser window to see how the<br>
+        background image behaves.
+    </p>
+    <div class="a"> This div contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will not
+        break and wrap word: thisisaveryveryveryveryveryverylongwordto the next line. Lorem, ipsum dolor sit amet
+        consectetur adipisicing elit. Autem natus mollitia exercitationem laboriosam, itaque laudantium dicta corrupti
+        accusamus incidunt molestias aperiam, cupiditate voluptatem eum nulla consequuntur nesciunt iste iure
+        consectetur! Possimus perferendis impedit obcaecati, temporibus quas dolor laboriosam ducimus. Delectus non
+        autem debitis dignissimos, libero iusto dolorum recusandae, ipsa ea maiores eos exercitationem nam saepe dolorem
+        hic tenetur architecto sapiente inventore error sequi rem suscipit rerum itaque optio? Laboriosam eum eius
+        possimus provident dolorem nostrum perspiciatis at, exercitationem, ratione earum omnis accusantium officia,
+        unde aliquam. Numquam, culpa velit. Iusto rerum beatae fugiat molestias ad ipsa. Quam unde voluptatibus error
+        enim, saepe aperiam quas culpa ab optio! Aspernatur recusandae eligendi, quis odio ex perferendis, corrupti
+        voluptatum reprehenderit ratione rerum, est corporis quod quaerat ut incidunt hic itaque ad. Velit minima,
+        placeat pariatur explicabo maiores obcaecati inventore doloribus itaque quas repellendus hic ea accusantium nemo
+        totam rem earum repudiandae impedit tempore molestiae? Nam ea necessitatibus id deleniti incidunt obcaecati
+        officiis voluptatibus aliquid consequuntur minus voluptatum, quisquam iusto quibusdam nemo a veniam itaque
+        aperiam mollitia saepe soluta? Explicabo architecto velit dicta excepturi quidem doloribus quo ad facere maxime
+        cumque libero accusamus deserunt, cum placeat, quis ducimus quibusdam? Delectus, consequatur, unde modi optio
+        accusantium fugit culpa ea amet sed dolore vel quisquam recusandae distinctio aliquid iure! Quasi, id provident
+        sequi nesciunt odit possimus explicabo quis voluptatum, tenetur quas eius beatae nisi soluta cupiditate nostrum
+        neque quia accusamus quam dolor, voluptate tempore. Amet, eos nulla harum deleniti minus cum officiis
+        dignissimos repudiandae ad nostrum maxime neque aspernatur! Dicta neque, facere quaerat fuga officiis nam eos.
+        Illum, officiis, ex laboriosam aliquam a quos tempora modi nostrum alias fugit et. Neque, obcaecati delectus
+        aliquam nostrum consequuntur laborum qui consequatur porro et quo eligendi voluptatibus adipisci veritatis?
+        Dolorum ipsa laudantium sit est iusto quae, assumenda quis facilis rem!</div>
+    <img src="ins.jpg" alt="insta" width="180px" height="180px" />
+
+    <div class="flex-container">
+        <div class="item auto">auto1</div>
+        <div class="item auto">auto2</div>
+        <div class="item auto">auto3</div>
+    </div>
+
+    <div class="flex-container">
+        <div class="item auto">auto(a)</div>
+        <div class="item initial">initial(b)</div>
+        <div class="item initial">initial(c)</div>
+    </div>
+
+    <div class="flex-container">
+        <div class="item auto">auto(X)</div>
+        <div class="item auto">auto(Y)</div>
+        <div class="item none">none(Z)</div>
+    </div>
+
+    <div class="flex-container">
+        <div class="item initial">initial(4)</div>
+        <div class="item none">none(5)</div>
+        <div class="item none">none(6)</div>
+    </div>
+
+    <div class="flex-container">
+        <div class="item four">4</div>
+        <div class="item two">2</div>
+        <div class="item one">1</div>
+    </div>
+
+</body>
+
+</html>

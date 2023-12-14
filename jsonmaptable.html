@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Table</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Sno.</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Department</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody id="employeeTableBody">
+            <!-- Table rows will be added here using JavaScript -->
+        </tbody>
+    </table>
+
+    <script>
+        // JSON data for 5 employees
+        var employeeData = [
+            {
+                "name": "Mohit",
+                "position": "Software Developer",
+                "department": "Engineering",
+                "salary": "80,000"
+            },
+            {
+                "name": " Sumit",
+                "position": "Sales Manager",
+                "department": "Sales",
+                "salary": "90,000"
+            },
+            {
+                "name": "Sohan",
+                "position": "Marketing Specialist",
+                "department": "Marketing",
+                "salary": "70,000"
+            },
+            {
+                "name": "Yuvraj",
+                "position": "HR Manager",
+                "department": "Human Resources",
+                "salary": "85,000"
+            },
+            {
+                "name": "Rohan",
+                "position": "Accountant",
+                "department": "Finance",
+                "salary": "75,000"
+            }
+        ];
+
+    //  employeeData.map((res)=>{
+    //     console.log(res)
+    //  })
+
+    // -----Method 1 using map function-----
+    //  function createTableRow(employee) {
+    //     var tableBody = document.getElementById("employeeTableBody");
+    //     var newRow = document.createElement("tr");
+    //     newRow.innerHTML = `
+    //         <td>${tableBody.children.length + 1}</td>
+    //         <td>${employee.name}</td>
+    //         <td>${employee.position}</td>
+    //         <td>${employee.department}</td>
+    //         <td>${employee.salary}</td>
+    //     `;
+    //     tableBody.appendChild(newRow);
+    // }
+
+    // // Loop through the employeeData array and create table rows
+    // employeeData.forEach(function (employee) {
+    //     createTableRow(employee);
+    // });
+
+// -------Method 2  using map funtion------
+
+var tbody = document.getElementById("employeeTableBody");
+
+// Iterate through the employeeData array and create table rows
+var tableRows = employeeData.map(function(employee, index) {
+    return `
+        <tr>
+            <td>${index + 1}</td>
+            <td>${employee.name}</td>
+            <td>${employee.position}</td>
+            <td>${employee.department}</td>
+            <td>${employee.salary}</td>
+        </tr>
+    `;
+});
+
+// Join the table rows and append them to the tbody
+tbody.innerHTML = tableRows.join("");
+
+
+// --------------Method 3  Without using map function.-------
+        // // Get a reference to the table body
+        // var tableBody = document.getElementById("employeeTableBody");
+
+        // // Loop through the JSON data and create table rows
+        // employeeData.forEach(function(employee,index) {
+        //     var row = tableBody.insertRow();
+        //     var srCell = row.insertCell(0)
+        //     var nameCell = row.insertCell(1);
+        //     var positionCell = row.insertCell(2);
+        //     var departmentCell = row.insertCell(3);
+        //     var salaryCell = row.insertCell(4);
+
+        //     srCell.textContent = index+1;
+        //     nameCell.textContent = employee.name;
+        //     positionCell.textContent = employee.position;
+        //     departmentCell.textContent = employee.department;
+        //     salaryCell.textContent = employee.salary;
+        // });
+    </script>
+</body>
+</html>

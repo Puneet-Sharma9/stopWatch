@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+const emps={
+    name:"Amandeep",
+    salary:23000,
+    dept:"Admin"
+}
+
+document.write(typeof(emps)) // object
+var checktype=JSON.stringify(emps)
+document.write(typeof(checktype)+"<br />") //here type is string
+
+// document.write(checktype[name]+"<br />")
+// document.write(JSON.stringify(checktype))
+
+// let res=JSON.parse(checktype)
+// document.write(typeof(res))
+// document.write(res.name,res.salary)
+
+
+
+
+    // const arr=[23,34,45,23,43]
+
+    // for(let val in arr){
+    //     document.write(arr[val]+" ");
+    // }
+
+//     arr.forEach(val => {
+        
+//         console.log(val)
+//     });
+
+//     arr.map((res,index)=>{
+        
+            
+//             console.log(index,res)
+        
+//     })
+
+
+//     let freelancers = [
+//         {name: "Harry", skill: "JavaScript"},
+//         {name: "Mark", skill: "Python"},
+//         {name: "David", skill:"JavaScript"}
+//     ];
+
+// let javascript_freelancers = freelancers.filter(function(freelancer) {
+//     return freelancer.skill == "JavaScript"; });
+
+// console.log(javascript_freelancers);
+// //document.write(javascript_freelancers)
+// let data=JSON.stringify(javascript_freelancers)
+// document.write(data)
+// //Output = [{ name: "Harry", skill: "JavaScript" }, { name: "David", skill: "JavaScript" }]
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

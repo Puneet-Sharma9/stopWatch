@@ -1,0 +1,64 @@
+<!-- div.box{this is box-$}*10 => this line is to make div 10 time with this message --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 300px;
+            height: 300px;
+            background-color: gainsboro;
+            margin: 100px; 
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        /* relative postion means related to the parent postion i.e container */
+        .red{
+            /* bottom: 50px; */
+            left: 100px; 
+            position: relative;
+            top: 100px;
+            /* right: 100px; */
+            background-color: red;
+        }
+        /* the parent of  absolute is html which is root element,relative to root ele. it chanegs the value acc to parent */
+        .green{
+            background-color: green;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        /* it will fix in top , other content scrolls it isn't, like nav bar */
+        .blue{
+            background-color: blue;
+            position: fixed;
+            top: 0;
+            left: 0;/*from this it will stick to start of body*/
+        }
+        .spacer{
+            height: 300vh;
+        }
+        /* this is acc to parent set value */
+        .purple{
+            background-color: purple;
+            /* position: sticky; */
+            left: 80px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box red"></div>
+        <div class="box green"></div>
+        <div class="box blue"></div>
+        <div class="box purple"></div>
+    </div>
+    <div class="spacer"></div>
+</body>
+</html> 

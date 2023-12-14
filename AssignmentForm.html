@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 2px solid black;
+        }
+
+        th, td {
+            border: 1px solid black; 
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="category">Category</label>
+    <input type="text" name="category" id="category" value="category" />
+    <button onclick="addCat()">Add New</button><br><br>
+    <!-- <table id="newCat"> -->
+        <!-- <tr> -->
+            <!-- <th>Sr No.</th> -->
+            <!-- <th>Category</th> -->
+            <!-- <th>Action</th> -->
+        <!-- </tr> -->
+    <!-- </table> -->
+    <script>
+        function addCat() {
+            let catName = document.getElementById("category").value;
+            let arr = [];
+
+            // for(let index in arr){
+            //     console.log(arr[index]);
+            // }
+            // for(let i=0; i<catName.length; i++){
+            //     arr.push(catName);
+            // }
+                // arr.push(catName);
+                // console.log(arr);
+
+            for(let value in arr){
+                arr.push(catName);
+                console.log(value);
+            }
+            console.log(arr);
+
+        }
+    </script>
+</body>
+
+</html>
